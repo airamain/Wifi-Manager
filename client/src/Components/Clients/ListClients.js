@@ -70,6 +70,9 @@ export default class ListClients extends Component {
           />
 
           {/* Caja de búsqueda */}
+          <h5 className="m-0 p-1 text-success">
+            <i > (Clientes activos: {this.state.activeClients})</i>
+          </h5>
 
           <Row>
             <Col className="p-3 mt-3 bg-light rounded shadow">
@@ -79,14 +82,7 @@ export default class ListClients extends Component {
               />
             </Col>
           </Row>
-
-          {/* Lista de clientes */}
-
-          <Row>
-            <Col className="p-3 my-3 bg-light rounded shadow">
-              <Row className="px-3 mb-3">
-                <Col>
-                  <p className="m-0 p-0">
+          <p className="m-1 p-1 bg-light text-success text-center" >
                     Agregar Cliente
                     <FontAwesomeIcon
                       className="ml-2 text-info"
@@ -99,13 +95,24 @@ export default class ListClients extends Component {
                       icon={faPlusSquare}
                     />
                   </p>
+
+          {/* Lista de clientes */}
+
+          <Row>
+            <Col className="p-3 my-3 bg-light rounded shadow">
+              <Row className="px-3 mb-3">
+                <Col>
+                 
                   <p className="m-0 p-0">
                     Nombre y Apellido
-                    <i className=""> (Clientes activos: {this.state.activeClients})</i>
+                   
                   </p>
                 </Col>
+                <Col>
+                  <p className="m-0 p-0 text-left">Dirección</p>
+                </Col>
                 <Col md={2}>
-                  <p className="m-0 p-0 text-right">Plan contratado</p>
+                  <p className="m-0 p-0 text-right">Plan</p>
                 </Col>
                 <Col md={1}>
                   <p className="m-0 p-0 text-right">Precio</p>
@@ -122,6 +129,9 @@ export default class ListClients extends Component {
                       <Row>
                         <Col>
                           <p className="m-0 p-0">{`${i.name} ${i.unSubscribingDate ? ' (dado de baja)' : ""}`}</p>
+                        </Col>
+                        <Col>
+                          <p className="m-0 p-0">{`${i.address} `}</p>
                         </Col>
                         <Col md={2}>
                           <p className="m-0 p-0 text-right">{i.plan}</p>

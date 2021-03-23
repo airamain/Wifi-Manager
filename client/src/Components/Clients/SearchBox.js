@@ -12,7 +12,7 @@ export default class SearchBox extends Component {
     };
   }
 
-  clear = () => {
+  cleanInputs = () => {
     this.setState({
       name: "",
       address: "",
@@ -23,11 +23,13 @@ export default class SearchBox extends Component {
   handleChange = (e) => {
     let { name, value } = e.target;
     this.setState({ [name]: value });
+    Axios.post(`/api/clients/search`, this.state, {
+      headers: { "auth-token": localStorage.getItem("token") },
+    }).then(({ data }) => this.props.setResults(data.data)); 
   };
 
   onSubmit = (e) => {
     e.preventDefault();
-
     Axios.post(`/api/clients/search`, this.state, {
       headers: { "auth-token": localStorage.getItem("token") },
     }).then(({ data }) => this.props.setResults(data.data));
