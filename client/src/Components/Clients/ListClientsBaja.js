@@ -31,10 +31,11 @@ export default class ListClients extends Component {
       headers: { "auth-token": localStorage.getItem("token") },
     })
       .then(({ data }) => {
-        data = data.filter(element => element.unSubscribingDate === null)
+        console.log("BARA")
+        data = data.filter(element => element.unSubscribingDate !== null)
         this.setState({
           fullClientsList: data,
-          activeClients: data.filter(i => !Boolean(i.unSubscribingDate)).length,
+          activeClients: data.filter(i => Boolean(i.unSubscribingDate)).length,
           isLoading: false,
         });
       })
@@ -71,7 +72,7 @@ export default class ListClients extends Component {
 
           {/* Caja de búsqueda */}
           <h5 className="m-0 p-1 text-success">
-            <i > (Clientes activos: {this.state.activeClients})</i>
+            <i > (Clientes Dados de Baja: {this.state.activeClients})</i>
           </h5>
 
           <Row>

@@ -8,7 +8,7 @@ export default class Home extends Component {
     const TOKEN = localStorage.getItem("token");
 
     if (TOKEN) {
-      this.props.history.push("/clients/list");
+      this.props.history.push("/clients/list-baja");
     } else {
       localStorage.removeItem("token");
       this.props.history.push("/");

@@ -41,7 +41,10 @@ export default class NavigationBar extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Item>
-              <Nav.Link href="/clients/list">Clientes</Nav.Link>
+              <Nav.Link href="/clients/list">Clientes Activos</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/clients/list-bajas">Clientes Dados de Baja</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/bills/list">Boletas</Nav.Link>

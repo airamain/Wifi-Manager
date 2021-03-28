@@ -6,7 +6,8 @@ import moment from "moment";
 
 import Home from "./Components/Home";
 import ListClients from "./Components/Clients/ListClients.js";
-import DetailClients from "./Components/Clients/DetailClients.js";
+import ListClientsBaja from "./Components/Clients/ListClientsBaja";
+import DetailClients from "./Components/Clients/DetailClients";
 import NavigationBar from "./Components/Layout/NavigationBar";
 
 import Login from "./Components/Auth/Login";
@@ -37,6 +38,7 @@ class App extends Component {
             {/* Client routes */}
 
             <Route exact path="/clients/list" render={(props) => <ListClients {...this.props} {...props} />} />
+            <Route exact path="/clients/list-baja" render={(props) => <ListClientsBaja {...this.props} {...props} />} />
             <Route exact path="/clients/details/:id" render={(props) => <DetailClients {...this.props} {...props} />} />
 
             {/* Bills routes */}
