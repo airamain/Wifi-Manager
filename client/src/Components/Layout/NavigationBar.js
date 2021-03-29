@@ -34,7 +34,7 @@ export default class NavigationBar extends Component {
   render() {
     return (
       <Navbar bg="primary" variant="dark" expand="lg">
-        <Link to="/">
+        <Link className="text-xl" classNam to="/clients/list">
           <Navbar.Brand>Wi-Fi Net Client Manager</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -43,9 +43,9 @@ export default class NavigationBar extends Component {
             <Nav.Item>
               <Nav.Link href="/clients/list">Clientes Activos</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/clients/list-bajas">Clientes Dados de Baja</Nav.Link>
-            </Nav.Item>
+            <Link to="/">
+              <Navbar.Brand className="client-manager-logo">Clientes Dados de Baja</Navbar.Brand>
+            </Link >
             <Nav.Item>
               <Nav.Link href="/bills/list">Boletas</Nav.Link>
             </Nav.Item>

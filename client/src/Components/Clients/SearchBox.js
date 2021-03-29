@@ -25,7 +25,7 @@ export default class SearchBox extends Component {
     this.setState({ [name]: value });
     Axios.post(`/api/clients/search`, this.state, {
       headers: { "auth-token": localStorage.getItem("token") },
-    }).then(({ data }) => this.props.setResults(data.data)); 
+    }).then(({ data }) => this.props.setResults(data.data.sort((a, b) => a.name.localeCompare(b.name)).filter(element => element.unSubscribingDate === null)));
   };
 
   onSubmit = (e) => {

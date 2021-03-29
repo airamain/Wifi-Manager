@@ -31,7 +31,8 @@ export default class ListClients extends Component {
       headers: { "auth-token": localStorage.getItem("token") },
     })
       .then(({ data }) => {
-        data = data.filter(element => element.unSubscribingDate === null)
+        data = data.filter(element => element.unSubscribingDate === null);
+        data =  data.sort ((a, b) => a.name.localeCompare (b.name));
         this.setState({
           fullClientsList: data,
           activeClients: data.filter(i => !Boolean(i.unSubscribingDate)).length,

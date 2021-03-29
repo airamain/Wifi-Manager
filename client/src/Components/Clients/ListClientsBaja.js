@@ -31,7 +31,6 @@ export default class ListClients extends Component {
       headers: { "auth-token": localStorage.getItem("token") },
     })
       .then(({ data }) => {
-        console.log("BARA")
         data = data.filter(element => element.unSubscribingDate !== null)
         this.setState({
           fullClientsList: data,
