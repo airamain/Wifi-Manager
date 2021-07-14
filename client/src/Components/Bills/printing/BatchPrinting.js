@@ -189,7 +189,7 @@ export default class BatchPrinting extends Component {
 
               doc.setTextColor(255, 0, 0);
               doc.setFontSize(10);
-              doc.text("LOS ABONOS PUEDEN SER PAGADOS EN RAPI PAGO O PAGO FACIL. INDICANDO CARGA DE 'UALA' CON DNI: 25444278", 5, 225);
+              doc.text("LOS ABONOS PUEDEN SER PAGADOS EN EFECTIVO EN RAPI PAGO. INDICANDO CARGA DE 'UALA' CON DNI: 25444278", 5, 225);
 
               doc.setTextColor(255, 0, 0);
               doc.setFontSize(10);

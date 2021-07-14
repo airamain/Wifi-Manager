@@ -29,6 +29,7 @@ const clientValidation = (data) => {
   const schema = Joi.object({
     name: Joi.string().required().trim(),
     address: Joi.string().required().trim(),
+    dni: Joi.string().required().trim(),
     inscriptionDate: Joi.date().optional().empty(""),
     unSubscribingDate: Joi.date().optional().empty(""),
     unSubscribingReason: Joi.string().trim().optional().empty(""),
@@ -56,6 +57,7 @@ const billValidation = (data) => {
       id: Joi.string().trim(),
       name: Joi.string().trim(),
       address: Joi.string().trim(),
+      dni: Joi.string().required().trim(),
     },
     price: Joi.number().required(),
     priceText: Joi.string().trim().required(),

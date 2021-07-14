@@ -14,6 +14,12 @@ const clientSchema = new Schema(
       min: 3,
       max: 50,
     },
+    dni: {
+      type: String,
+      required: true,
+      min: 8,
+      max: 9,
+    },
     inscriptionDate: {
       type: Date,
       required: true,

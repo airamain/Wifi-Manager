@@ -11,6 +11,7 @@ export default class AddClients extends Component {
     this.state = {
       name: "",
       address: "",
+      dni:"",
       inscriptionDate: "",
       plan: "",
       price: "",
@@ -35,10 +36,10 @@ export default class AddClients extends Component {
         this.setState({
           ...clientToEdit,
           inscriptionDate: moment(clientToEdit.inscriptionDate).format(
-            "YYYY-MM-DD"
+            "MM-DD-YYYY"
           ),
           unSubscribingDate: clientToEdit.unSubscribingDate
-            ? moment(clientToEdit.unSubscribingDate).format("YYYY-MM-DD")
+            ? moment(clientToEdit.unSubscribingDate).format("MM-DD-YYYY")
             : "",
         });
       }
@@ -109,6 +110,7 @@ export default class AddClients extends Component {
     this.setState({
       name: "",
       address: "",
+      dni:"",
       inscriptionDate: "",
       plan: "",
       price: "",
@@ -163,6 +165,17 @@ export default class AddClients extends Component {
             </Form.Group>
 
             <Form.Group>
+              <Form.Label>DNI {requiredStar}</Form.Label>
+              <Form.Control
+                value={this.state.dni}
+                onChange={this.handleChange}
+                type="text"
+                name="dni"
+                required
+              />
+            </Form.Group>
+
+            <Form.Group>
               <Form.Label>Fecha de alta {requiredStar}</Form.Label>
               <Form.Control
                 value={this.state.inscriptionDate}
@@ -186,11 +199,18 @@ export default class AddClients extends Component {
                 <option>3MB</option>
                 <option>5MB</option>
                 <option>10MB</option>
+                <option>15MB</option>
                 <option>20MB</option>
                 <option>30MB</option>
                 <option>50MB</option>
                 <option>80MB</option>
                 <option>100MB</option>
+                <option>150MB</option>
+                <option>200MB</option>
+                <option>250MB</option>
+                <option>300MB</option>
+                <option>350MB</option>
+                <option>400MB</option>
               </Form.Control>
             </Form.Group>
 

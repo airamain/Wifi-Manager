@@ -183,6 +183,10 @@ export default class DetailClients extends Component {
                 <span className="text-muted">E-mail:</span>{" "}
                 {this.state.data.email}
               </li>
+              <li>
+                <span className="text-muted">DNI:</span>{" "}
+                {this.state.data.dni}
+              </li>
             </ul>
           </Col>
           <Col className="shadow bg-light rounded p-3 ml-3 ">
