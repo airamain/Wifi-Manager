@@ -149,7 +149,7 @@ export default class PhysicalBill extends Component {
                         </ul>
                       </ul>
 
-                      <p className='text-center text-info bill-payment-item m-0 mt-5'>Puede abonar con <strong>ualá</strong> en <strong>PagoFácil</strong> o <strong>RapiPago</strong> indicando el DNI: <strong>25444278</strong>.</p>
+                      <p className='text-center text-info bill-payment-item m-0 mt-5'>Puede abonar con <strong>ualá</strong> en <strong>RapiPago</strong> indicando el DNI: <strong>25444278</strong>.</p>
                       <p className='text-center text-info bill-payment-item m-0'>Enviar comprobante de pago por WhatsApp o por email a: <strong>info.wifi.net@gmail.com</strong></p>
 
                     </Col>
