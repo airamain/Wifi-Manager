@@ -21,12 +21,16 @@ export default class SearchBox extends Component {
   };
 
   handleChange = (e) => {
+    let strSearch = Object.values(e.target.value);
     let { name, value } = e.target;
     this.setState({ [name]: value });
-    Axios.post(`/api/clients/search`, this.state, {
-      headers: { "auth-token": localStorage.getItem("token") },
-    }).then(({ data }) => this.props.setResults(data.data.sort((a, b) => a.name.localeCompare(b.name)).filter(element => element.unSubscribingDate === null)));
+    if (strSearch.length >= 3 || strSearch.length === 0) {
+      Axios.post(`/api/clients/search`, this.state, {
+        headers: { "auth-token": localStorage.getItem("token") },
+      }).then(({ data }) => this.props.setResults(data.data.sort((a, b) => a.name.localeCompare(b.name)).filter(element => element.unSubscribingDate === null)));
+    }
   };
+
 
   onSubmit = (e) => {
     e.preventDefault();
