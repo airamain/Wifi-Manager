@@ -35,13 +35,12 @@ export default class AddClients extends Component {
 
         this.setState({
           ...clientToEdit,
-          inscriptionDate: moment(clientToEdit.inscriptionDate).format(
-            "MM-DD-YYYY"
-          ),
-          unSubscribingDate: clientToEdit.unSubscribingDate
-            ? moment(clientToEdit.unSubscribingDate).format("MM-DD-YYYY")
+          inscriptionDate: moment(clientToEdit.inscriptionDate).format("YYYY-MM-DD"),
+          unSubscribingDate: clientToEdit.unSubscribingDate ? 
+          moment(clientToEdit.unSubscribingDate).format("YYYY-MM-DD")
             : "",
         });
+        
       }
     }
   }
@@ -137,8 +136,8 @@ export default class AddClients extends Component {
           <Modal.Header closeButton>
             <Modal.Title>
               {this.props.isEdit
-                ? "Modificar un cliente."
-                : "Agregar un cliente."}
+                ? "Modificar un Cliente."
+                : "Agregar un Cliente"}
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
