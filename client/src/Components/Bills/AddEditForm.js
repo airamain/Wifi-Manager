@@ -9,13 +9,13 @@ export default class AddEditForm extends Component {
     super(props);
 
     this.state = {
-      dueDate: moment().add(10, "d").format("YYYY-MM-DD"),
+      dueDate: moment().add(10, "d").format("L"),
       clientId: "",
       name: "",
       plan: "",
       price: 0,
       priceText: "",
-      month: moment().add(10, "d").format("YYYY-MM"),
+      month: moment().add(10, "d").format("L"),
       additionalNotes: "",
       partial: false,
     };
