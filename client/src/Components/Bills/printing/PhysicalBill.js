@@ -120,7 +120,7 @@ export default class PhysicalBill extends Component {
               </Row>
               <Row>
                 <Col md="4" className="border v-center"><p className="lead m-0 py-2">Como:</p></Col>
-                <Col className="border v-center">Abono del mes {this.state.data.month}</Col>
+                <Col className="border v-center">Abono del mes: {moment(this.state.data.month).format("MMMM YYYY")}</Col>
               </Row>
               <Row className="border v-center">
                 <Col md="8">
