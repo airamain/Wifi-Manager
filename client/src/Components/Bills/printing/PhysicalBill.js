@@ -128,7 +128,17 @@ export default class PhysicalBill extends Component {
                     <Col className="border py-2">
                       <h1 className='bill-payment-title text-info'>Métodos de pago</h1>
                       <ul>
-                        <li><h2 className='bill-payment-subtitle mt-3'>CBU - Santander Rio</h2></li>
+                        <li><h2 className='bill-payment-subtitle mt-3 text-uppercase'>CVU - Mercado Pago</h2></li>
+                        <li className='bill-payment-item'>N° de CVU: <strong>0000003100037983212250</strong></li>
+                        <li className='bill-payment-item'> Alias: <strong>Wifi-Net</strong></li>
+                        <li className='bill-payment-item'>Titular: <strong>Jose Manuel Adrian Iramain</strong></li>
+                        <li className='bill-payment-item'>CUIL / CUIT: <strong>20-25444278-0</strong></li>
+                        <ul>
+                          <li className='bill-payment-item'><strong>En Rapi Pago o Pago Facil</strong></li>
+                          <li className='bill-payment-item'>N° de CODIGO: <strong>37983 21225</strong></li>
+                        </ul>
+
+                        <li><h2 className='bill-payment-subtitle mt-3 text-uppercase'>CBU - Santander Rio</h2></li>
 
                         <ul>
                           <li className='bill-payment-item'>N° de Cuenta: <strong>069-236693/5</strong></li>
@@ -138,7 +148,7 @@ export default class PhysicalBill extends Component {
                           <li className='bill-payment-item'>CUIL / CUIT: <strong>20-25444278-0</strong></li>
                         </ul>
 
-                        <li><h2 className='bill-payment-subtitle mt-3'>CBU - Rebanking (Transatlantica Compañía Financiera S.A.)</h2></li>
+                        <li><h2 className='bill-payment-subtitle mt-3 text-uppercase'>CBU - REBA "Rebanking" (Transatlantica Compañía Financiera S.A.)</h2></li>
 
                         <ul>
                           <li className='bill-payment-item'>N° de Cuenta: <strong>999-180087/2</strong></li>
@@ -149,8 +159,9 @@ export default class PhysicalBill extends Component {
                         </ul>
                       </ul>
 
-                      <p className='text-center text-info bill-payment-item m-0 mt-5'>Puede abonar con <strong>ualá</strong> en <strong>RapiPago</strong> indicando el DNI: <strong>25444278</strong>.</p>
-                      <p className='text-center text-info bill-payment-item m-0'>Enviar comprobante de pago por WhatsApp o por email a: <strong>info.wifi.net@gmail.com</strong></p>
+                      <p className='text-center text-danger bill-payment-item m-0 mt-5 fs-2 text-uppercase'>Puede abonar en: <strong> Pago Facil </strong> Pedis ingresar dinero en REBA, luego brindás el CUIL: <strong>20254442780</strong>.</p>
+                      <p className='text-center text-danger bill-payment-item m-0 fs-2 text-uppercase'>Sexo:<strong>masculino</strong> DNI: <strong>25444278</strong> Y el monto que vas a ingresar como pago de tu abono.</p>
+                      <p className='text-center text-danger bill-payment-item m-0 fs-2 text-uppercase'>Luego Envias tu comprobante de pago por WhatsApp <strong>3815285322</strong> o por email a: <strong>info.wifi.net@gmail.com</strong></p>
 
                     </Col>
                   </Row>
