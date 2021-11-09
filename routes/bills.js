@@ -21,8 +21,8 @@ router.post("/send", auth, (req, res) => {
 
     , TRANSPORTCONFIG = {
       host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: { user: process.env.SENDERMAILACCOUNT, pass: process.env.SENDERMAILPASSWOR },
       tls: { rejectUnauthorized: false, ciphers: "SSLv3", },
     }
